@@ -11,4 +11,5 @@ ro.boot.dynamic_partitions=true
 ro.adb.secure=0
 fbe.metadata.wrappedkey=true
 
-import /vendor/build_${ro.boot.product.hardware.sku}.prop
+#import /vendor/build_${ro.boot.product.hardware.sku}.prop
+ro.sf.lcd_density=385
