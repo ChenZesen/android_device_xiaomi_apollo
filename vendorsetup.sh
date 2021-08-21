@@ -36,13 +36,14 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
  	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+	export TW_DEFAULT_LANGUAGE="zh_CN"
 	
 	export OF_KEEP_FORCED_ENCRYPTION=1
 	export OF_PATCH_AVB20=1
 	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1	
  
 	export OF_USE_MAGISKBOOT=1
-	export OF_USE_NEW_MAGISKBOOT=1
+	export FOX_USE_SPECIFIC_MAGISK_ZIP="/drone/fox_10.0/device/xiaomi/apollo/Magisk-v23.0.zip"
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 	export OF_FORCE_MAGISKBOOT_BOOT_PATCH_MIUI=1; # if you disable this, then enable the next line
 	export OF_NO_MIUI_PATCH_WARNING=1
@@ -77,7 +78,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     # -- add settings for R11 --
      export FOX_VERSION=R11.1_0
      export FOX_BUILD_TYPE=Beta
-     export OF_MAINTAINER=Vince
+     export OF_MAINTAINER=抵制收费REC
      export OF_USE_TWRP_SAR_DETECT=1
     # -- end R11 settings --
 
