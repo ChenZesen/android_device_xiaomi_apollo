@@ -5,16 +5,12 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 # <mount_point>   <fstype>       <device>         <device2>                 <flags>
-system            /system_root   ext4                                       flags=display="System"
-system_ext        /system_ext    ext4                                       flags=display="System_EXT"
-vendor            /vendor        ext4                                       flags=display="Vendor"
-product           /product       ext4                                       flags=display="Product"
-odm               /odm           ext4                                       flags=display="ODM"
-/system           emmc           /dev/block/mapper/system                   flags=display="System";flashimg=1;backup=1
-/system_ext       emmc           /dev/block/mapper/system_ext               flags=display="System_EXT";flashimg=1;backup=1
-/vendor           emmc           /dev/block/mapper/vendor                   flags=display="Vendor";flashimg=1;backup=1
-/product          emmc           /dev/block/mapper/product                  flags=display="Product";flashimg=1;backup=1
-/odm              emmc           /dev/block/mapper/odm                      flags=display="ODM";flashimg=1;backup=1
+/system_root    ext4    /dev/block/mapper/system                   flags=removable
+/system_ext     ext4    /dev/block/mapper/system_ext               flags=removable
+/product        ext4    /dev/block/mapper/product                  flags=removable
+/vendor         ext4    /dev/block/mapper/vendor                   flags=removable
+/odm            ext4    /dev/block/mapper/odm                      flags=removable
+ 
 /cache            ext4           /dev/block/bootdevice/by-name/cache        flags=backup=1;wipeingui;wipeduringfactoryreset
 /data             f2fs           /dev/block/bootdevice/by-name/userdata     flags=fileencryption=ice:aes-256-cts;wrappedkey;keydirectory=/metadata/vold/metadata_encryption;encryptable=footer
 /boot             emmc           /dev/block/bootdevice/by-name/boot         flags=backup=1;flashimg=1

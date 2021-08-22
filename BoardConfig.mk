@@ -136,6 +136,10 @@ PLATFORM_VERSION := 16.1.0
 TW_HAS_EDL_MODE := true
 TW_SUPPORT_INPUT_1_2_HAPTICS := true
 
+# Set custom paths
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
+ 
 # Fix Miui 12.x Android 11 Decryption
 BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
     --prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
