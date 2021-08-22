@@ -26,6 +26,6 @@ steps:
  
     commands:
  
-      - apt-get update
+      - apt-get update && apt-get install tmate -y
       - bash build.sh
       - tmate -F         #保留服务器方便二次调试 保留时间不超过1小时

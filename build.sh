@@ -11,8 +11,8 @@ echo "Setting Up the Compile Environment "
  
 git clone https://gitlab.com/OrangeFox/misc/scripts
 bash scripts/setup/android_build_env.sh
-bash scripts/setup/install_android_sdk.sh
-bash scripts/setup/install_android_sdk.sh
+#bash scripts/setup/install_android_sdk.sh
+#bash scripts/setup/install_android_sdk.sh
 echo "Start compiling "
  
 mkdir ~/OrangeFox_10
