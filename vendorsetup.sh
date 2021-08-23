@@ -76,8 +76,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
      export OF_STATUS_H=115
 
     # -- add settings for R11 --
-     export FOX_VERSION=R11.1
-     export FOX_BUILD_TYPE=SSSSS
+     export FOX_VERSION=R11.1_0
+     export FOX_BUILD_TYPE=Beta
      export OF_MAINTAINER=抵制收费REC
      export OF_USE_TWRP_SAR_DETECT=1
     # -- end R11 settings --
