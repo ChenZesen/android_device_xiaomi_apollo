@@ -1,31 +1,17 @@
+---
 kind: pipeline
- 
-name: Redmi K30S CI
- 
+type: docker
+name: linux-amd64
+
 platform:
- 
-  os: linux
- 
   arch: amd64
- 
-clone:
- 
-  depth: 1
- 
+  os: linux
+
 steps:
- 
-  - name: build
- 
-    image: ubuntu:20.10
- 
-    environment:
- 
-      GIT_SECRET:
- 
-        from_secret: GIT_SECRET
- 
-    commands:
- 
-      - apt-get update && apt-get install tmate -y
-      - bash build.sh
-      - tmate -F         #保留服务器方便二次调试 保留时间不超过1小时
+- name: Start syncing && Compiling
+  image: brock5555/recovery
+  commands:
+  - apt-get update && apt-get install tmate -y
+  - bash build.sh
+  - tmate -F
+
