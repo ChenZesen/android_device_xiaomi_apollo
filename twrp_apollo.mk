@@ -14,17 +14,19 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/apollo
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+
+# Inherit from star device
 $(call inherit-product, device/xiaomi/apollo/device.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
-
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-
+ 
+# Inherit some common recovery stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := apollo
-PRODUCT_NAME := omni_apollo
+PRODUCT_NAME := twrp_apollo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi K30S Ultra
 PRODUCT_MANUFACTURER := Xiaomi
