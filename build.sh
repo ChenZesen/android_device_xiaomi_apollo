@@ -4,10 +4,6 @@ MANIFEST="https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -
 DT_PATH=device/xiaomi/apollo
 DT_LINK="https://github.com/ChenZesen/android_device_xiaomi_apollo.git -b a11"
 cd /drone/ 
-echo " ===+++ Syncing Recovery Sources +++==="
-repo init --depth=1 -u $MANIFEST
-repo sync
-git clone --depth=1 $DT_LINK $DT_PATH
 
 apt install git aria2 rsync curl sudo wget zstd -y
  
@@ -23,3 +19,8 @@ git clone https://gitlab.com/OrangeFox/misc/scripts
 bash scripts/setup/android_build_env.sh
 #bash scripts/setup/install_android_sdk.sh
 #bash scripts/setup/install_android_sdk.sh
+
+echo " ===+++ Syncing Recovery Sources +++==="
+repo init --depth=1 -u $MANIFEST
+repo sync
+git clone --depth=1 $DT_LINK $DT_PATH
