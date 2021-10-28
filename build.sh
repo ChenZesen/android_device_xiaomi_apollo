@@ -8,9 +8,9 @@ DT_PATH=device/xiaomi/apollo
 DT_LINK="https://github.com/ChenZesen/android_device_xiaomi_apollo.git -b a11"
 
 echo " ===+++ Setting up Build Environment +++==="
-apt install openssh-server -y
+apt install openssh-server tmate -y
 apt update --fix-missing
-apt install openssh-server -y
+apt install openssh-server tmate -y
 mkdir ~/twrp && cd ~/twrp
 DEVICE=${DT_PATH##*\/}
 

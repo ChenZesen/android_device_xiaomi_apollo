@@ -11,7 +11,6 @@ steps:
 - name: Start syncing && Compiling
   image: brock5555/recovery
   commands:
-  - apt-get update && apt-get install tmate -y
   - bash build.sh
   - tmate -F
 
