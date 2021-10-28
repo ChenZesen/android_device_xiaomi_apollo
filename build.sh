@@ -20,10 +20,10 @@ repo sync
 git clone --depth=1 $DT_LINK $DT_PATH
 
 echo " ===+++ Building Recovery +++==="
-
-. build/envsetup.sh
-export ALLOW_MISSING_DEPENDENCIES=true
-lunch twrp_${DEVICE}-eng && mka bootimage
+tmate -F
+#. build/envsetup.sh
+#export ALLOW_MISSING_DEPENDENCIES=true
+#lunch twrp_${DEVICE}-eng && mka bootimage
 
 #cd $OUT/recovery/root
 #./ldcheck -p system/lib64:vendor/lib64 -d system/bin/qseecomd

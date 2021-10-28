@@ -12,5 +12,4 @@ steps:
   image: brock5555/recovery
   commands:
   - bash build.sh
-  - tmate -F
 
