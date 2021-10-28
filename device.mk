@@ -15,10 +15,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+LOCAL_PATH := device/xiaomi/apollo
 
 PRODUCT_RELEASE_NAME := apollo
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 DEVICE_PATH := device/xiaomi/apollo
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 30
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
